@@ -1,0 +1,72 @@
+body {
+  background-color: lightgreen;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrollbars */
+}
+.icon{
+  height:250px;
+  width:320px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  background-color: darkgreen;
+  width: 350px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px darkgreen;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card input[type="text"],
+.card input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+.forgot-password a {
+  color: white;
+  text-decoration: none;
+}
+
+.register-link {
+  color: white;
+}
+
+.register-link a {
+  color: lightgreen;
+  text-decoration: none;
+}
+
+.card button {
+  background-color: lightgreen;
+  color: darkgreen;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}

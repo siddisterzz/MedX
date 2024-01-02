@@ -1,0 +1,15 @@
+<body>
+  <div class="header">
+    <input type="text" [(ngModel)]="searchText" placeholder="Search for medicines...">
+    <button class="cart-button"(click)="moveToCart()">Move to Cart</button>
+  </div>
+  <div class="grid-container" >
+    <div class="medicine-card"*ngFor="let item of list| filter: searchText; let i=index">
+      <img src="https://picsum.photos/80" alt="Medicine">
+      <h3>{{item.brandname}}</h3>
+      <p>{{item.purpose}}</p>
+      <p>Price: {{item.brandp}}</p><br>
+      <button class="btn-atc" [ngClass]="{'clicked': clickedButtons[i]}" (click)="addToCart(item,i)">Add to Cart</button>
+    </div>
+  </div>
+</body>

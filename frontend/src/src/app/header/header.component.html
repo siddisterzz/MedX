@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand px-2">
+  <!--Toggle Icon-->
+    <div class="side-nav-button p-2 me-1 text-light" (click)="SideNavToggled()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  <!--for brand-->
+    <a routerLinkActive="active" [routerLink]="''" class="navbar-brand px-2 text-light">Medex</a>
+  <!--All dropdowns-->
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item px-1">
+          <a class="nav-link text-light active" aria-current="page" routerLinkActive="active" [routerLink]="''">Home</a>
+        </li>
+        <li class="nav-item px-1">
+          <a class="nav-link text-light active" routerLinkActive="active" [routerLink]="'contact'">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  <!--Log out button-->
+  <div class="profile-logo dropstart px-2" *ngIf="!isAuthenticated">
+    <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">Sign in</button>
+    <div class="dropdown-menu p-2">
+      <ul style="margin:0px; padding:0px; list-style: none;">
+        <li ><a class="dropdown-item selected" routerLinkActive="active" [routerLink]="'login'">Login</a></li>
+        <li ><a class="dropdown-item selected" routerLinkActive="active" [routerLink]="'new-user'">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>

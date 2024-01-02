@@ -1,0 +1,29 @@
+<body>
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card">
+      <img src="https://drive.google.com/uc?export=view&id=1Y7nzcClZgAg1x22PwOq1UFQiGSn2uyiO" alt="Logo" class="icon logo mb-4">
+      <form>
+        <div class="mb-3">
+          <input id="name"type="text" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="mb-3">
+          <input id="mobile" type="tel" class="form-control" placeholder="Mobile Number" required>
+        </div>
+        <div class="mb-3">
+          <input id="email" type="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+          <input id="password" type="password" class="form-control" placeholder="Password" required>
+        </div>
+        <div class="mb-3">
+          <input id="cpassword" type="password" class="form-control" placeholder="Confirm Password" required>
+        </div>
+        <button (click)="register()" class="btn btn-primary w-100">Register</button>
+      </form>
+      <div class="login-link mt-3">
+        <span>Already have an account? </span>
+        <a href="#">Log In</a>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,41 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: darkcyan;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+button:hover{
+  background-color: darkblue;
+}
+
+#razorpay-failure,
+#razorpay-error {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #FED7D7;
+  color: #9B2C2C;
+  border: 1px solid #ECC5C5;
+  border-radius: 4px;
+}

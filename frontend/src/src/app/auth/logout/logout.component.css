@@ -1,0 +1,51 @@
+body {
+  background-color: lightgreen;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrollbars */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgreen;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  background-color: darkgreen;
+  color: white;
+  align-items: center;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-yes,
+.button-no {
+  margin: 0 5px;
+  padding: 5px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.button-yes {
+  background-color: darkcyan;
+  color: black;
+}
+
+.button-no {
+  background-color: darkcyan;
+  color: black;
+}

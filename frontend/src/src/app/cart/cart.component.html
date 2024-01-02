@@ -1,0 +1,69 @@
+<body>
+    <header>
+      <h1>Your Cart (Price given is per 10 tabs)</h1>
+    </header>
+
+    <main>
+      <div class="card">
+        <ng-container *ngFor="let item of selectedMedicines; let i = index;">
+        <div class="card-item" *ngIf="removeStatus[i]" >
+          <div class="product">
+            <div class="placeholder-image"></div>
+            <div class="product-details">
+              <h3>{{item.brandname}}</h3>
+              <p>{{item.purpose}}</p>
+            </div>
+          </div>
+          <div class="price">{{item.brandp}}</div>
+          <div class="quantity">
+              <button (click)="decreaseQuantity(item)" class="quantity-button minus-button">-</button>
+              <span class="quantity-value">{{quantity[i]}}</span>
+              <button (click)="increseQuantity(item)" class="quantity-button plus-button">+</button>
+          </div>
+          <div class="subtotal">{{bprice[i]}}</div>
+          <button (click)="remove(item)"class="remove-button">Remove</button>
+        </div>
+      </ng-container>
+      <div class="total">Total: {{bsum}}</div>
+  </div>
+
+  <button class="generify-button" (click)="cstatus()">Generify</button>
+
+  <div class="card" *ngIf="cartStatus">
+    <ng-container *ngFor="let item of selectedMedicines; let i = index;">
+    <div class="card-item" *ngIf="removeStatus[i]" >
+      <div class="product">
+        <div class="placeholder-image"></div>
+        <div class="product-details">
+          <h3>{{item.genname}}</h3>
+          <p>{{item.purpose}}</p>
+        </div>
+      </div>
+      <div class="price">{{item.genp}}</div>
+      <div class="quantity">
+          <button (click)="decreaseQuantity(item)" class="quantity-button minus-button">-</button>
+          <span class="quantity-value">{{quantity[i]}}</span>
+          <button (click)="increseQuantity(item)" class="quantity-button plus-button">+</button>
+      </div>
+      <div class="subtotal">{{gprice[i]}}</div>
+      <button (click)="remove(item)"class="remove-button">Remove</button>
+    </div>
+  </ng-container>
+  <div class="total">Total: {{gsum}}</div>
+
+</div>
+<br>
+<div class="strip" *ngIf="cartStatus">
+  <div>
+    We saved you : {{bsum - gsum}}
+  </div>
+</div>
+
+<div class="additional-buttons">
+  <button class="additional-button left-button" (click)="bbutton()">Go with Branded Medicines</button>
+  <button class="additional-button right-button" (click)="gbutton()">Go with Generic Mediciens</button>
+</div>
+
+<app-razorpay></app-razorpay>
+    </main>
+</body>

@@ -1,0 +1,26 @@
+<body>
+  <h1>Invoice</h1>
+
+  <!-- Invoice for User 1 -->
+  <div class="card" *ngFor="let item of list">
+    <div class="card-header">User Details</div>
+    <ul class="nested-list">
+      <li><strong>Name:</strong>{{item.name}}</li>
+      <li><strong>Email:</strong>{{item.email}}</li>
+      <li><strong>Date:</strong>{{item.orderdate}}</li>
+    </ul>
+
+    <div class="card-header">Medicines</div>
+    <ul class="nested-list" *ngFor="let item1 of item.medicines;let i=index">
+      <li>
+        <div class="card">
+          <div class="card-header">Medicine {{i+1}}</div>
+          <ul class="nested-list">
+            <li><strong>Name:</strong>{{item.status=="1"?item1.brandname:item1.genname}}</li>
+            <li><strong>Price:</strong>{{item.status=="1"?item1.brandp:item1.genp}}</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
